@@ -22,6 +22,7 @@ Throughout school, I made a few videos for presentations. So I will explain each
   - Complimented later for the video by peers
 
 "Math-Textbook" is a gif I made as a small one off
+ - Can lag when first opened
  - We had to show out textbook with a cover on
  - I had fun with it and made this
  - The teacher even presented all of ours "pictures" to the class and everyone laughed at mine
