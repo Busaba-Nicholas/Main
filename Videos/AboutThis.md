@@ -1,5 +1,5 @@
-Throughout school, I made a few videos for presentations.
-So I will explain each video and its context.
+Throughout school, I made a few videos for presentations. 
+So I will explain each video and its context. 
 
 "AAAAAAAA DONE" is the English Trailer I made:
   - Titled that because I was happy to be done with it after all the work put into it and I wanted to easily find it at the top of my files
