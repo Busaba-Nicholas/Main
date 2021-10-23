@@ -5,7 +5,6 @@ Throughout school, I made a few videos for presentations. So I will explain each
  - After reading a short story for class (forgot name) I was tasked with making an illustration
  - I decided to make a trailer for my illustration, and despite what the teacher expected I made it animated
  - **Background music (hard to hear) is taken from _iMovie_**
-  
  - First time using the software for more than experimentation
  - All voices were done by me (with varying microphone qualities)
  - It was a  successful presentation since everyone paid attention to it
