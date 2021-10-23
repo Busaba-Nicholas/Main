@@ -8,5 +8,7 @@ Features include:
   - Telling you the current time (on your pc) and current period
 
 Other notes:
-  - Alt + Enter to fullscreen
-  - Not having a 16:9 ratio breaks the UI
+  - Only supports 16:9 ratio, changing it causing graphical problems
+  - Not GPU optimized at all
+  - Only tested on Windows
+  - Alt + Enter can be used to enter and exit fullscreen
