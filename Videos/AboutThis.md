@@ -11,14 +11,12 @@ So I will explain each video and its context.
   - All voices were done by me (with varying microphone qualities)
   - It was a  successful presentation since everyone paid attention to it
 
-
 "Shark_Tank" is a History project about an invention in the Industrial Age:
   - We were given an invention and had to talk about who made it and how it worked
   - **Images in the video aren't mine and I take no credit in their creation**
 
   - Different style to the English trailer
   - Voiced by me (with more consistent microphone quality)
-
 
 "FinalProjectExport" is a final project in a different History Class:
   - We had to talk about different aspects in a certain decade, and I did the 1860s
