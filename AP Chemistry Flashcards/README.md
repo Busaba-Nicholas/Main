@@ -1,3 +1,5 @@
+**Once downloaded open up the ".exe" (you may need to bypass Windows Defender)**
+
 When enrolling in AP Chemistry for the 2020-2021 academic year, we were tasked with memorizing a bunch of information relating to elements and compounds.
 
 Since we were often required to memorize 3 things at a time (Element, Abbreviation, charge) Quizlet would not have worked. 
