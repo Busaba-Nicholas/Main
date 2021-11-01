@@ -1,4 +1,4 @@
-Once downloaded open up the ".exe" (you may need to bypass Windows Defender)
+**Once downloaded open up the ".exe" (you may need to bypass Windows Defender)**
 
 At the end of a Computer Science class, I was tasked with doing something new to learn more about programming.
 I then decided to use Unity for the first time after hearing a lot about it. So while not perfect this is where I learned most of my skills.
