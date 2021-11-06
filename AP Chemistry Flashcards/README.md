@@ -1,4 +1,5 @@
 **Once downloaded open up the ".exe" (you may need to bypass Windows Defender)**
+**Or go here: https://busaba-nicholas.github.io/APChemistryFlashcards/**
 
 When enrolling in AP Chemistry for the 2020-2021 academic year, we were tasked with memorizing a bunch of information relating to elements and compounds.
 
