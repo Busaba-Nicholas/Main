@@ -10,6 +10,8 @@ So I decided to use Unity to make my own program with "3 sided" flashcards.
 Since this was made quickly it isn't very intuitive so I'll explain how it works (some keybinds and options may not exist depending on the version you are using)
 
 Keybinds/Hotkeys:
+  - left and tight arrow keys to change flashcard
+  - up and down arrow keys to flip the 3 sided flashcard
   - 'z' to 'm' changes the section of what you are studying (can also click the buttons at the bottom
   - '1' to '3' change with flashcard is defaulted to when switching between them (slider at the top left also works)
   - 'q' opens/closes the periodic table (can also click the button at the top right but it's a bit bugged)
