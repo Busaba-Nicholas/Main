@@ -1,5 +1,7 @@
 **Once downloaded open up the ".exe" (you may need to bypass Windows Defender)**
 
+**Or go here: https://busaba-nicholas.github.io/Main/School%20Bell%20Simulation/WebGL/**
+
 When the pandemic started I originally used the alarms on my computer to get to class on time, but they had lots of problems.
 So, I made my own program using Unity that will allow me to customize when the bells ring relative to class starting and stopping.
 
