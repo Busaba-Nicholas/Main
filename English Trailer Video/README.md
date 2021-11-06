@@ -1,4 +1,4 @@
-**Background music (hard to hear) is taken from _iMovie_**
+**Background music (hard to hear) is taken from _iMovie_ and other non-voice audio doesn't belong to me**
 
 This is the trailer I made for an English class presentation.
 
