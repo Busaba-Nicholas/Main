@@ -16,7 +16,7 @@ Keybinds/Hotkeys:
   - '1' to '3' change with flashcard is defaulted to when switching between them (slider at the top left also works)
   - 'q' opens/closes the periodic table (can also click the button at the top right but it's a bit bugged)
   - 'r' randomizes the order of the flashcards in that specific section from the number of the top slider to the number on the bottom slider (can also click randomize at the top right)
-  'e' resets randomization in that section
+  - 'e' resets randomization in that section
   
 Other notes:
   - Only supports 16:9 ratio, changing it causing graphical problems
