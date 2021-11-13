@@ -1,6 +1,6 @@
 **Once downloaded open up the ".exe" (you may need to bypass Windows Defender)**
 
-**Or go here: https://busaba-nicholas.github.io/Main/AP%20Chemistry%20Flashcards/WebGL/**
+**Or go here: https://busaba-nicholas.github.io/Main/AP%20Chemistry%20Flashcards/WebGL/ForNow.html**
 
 When enrolling in AP Chemistry for the 2020-2021 academic year, we were tasked with memorizing a bunch of information relating to elements and compounds.
 
