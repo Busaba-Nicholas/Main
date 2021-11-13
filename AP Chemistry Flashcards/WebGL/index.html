@@ -12,15 +12,98 @@
       var unityInstance = UnityLoader.instantiate("unityContainer", "Build/Files.json", {onProgress: UnityProgress});
     </script>
   </head>
+  
   <body>
-    <div class="webgl-content">
-      <div id="unityContainer" style="width: 1280px; height: 720px"></div>
-      <div class="footer">
-        <div class="webgl-logo"></div>
-        <div class="fullscreen" onclick="unityInstance.SetFullscreen(1)"></div>
-        <div class="title">AP Chem Studying</div>
-      </div>
+    <div class = "Title">
+        <b>Scuffed "Quizlet" for AP Chemistry</b>
+        <div class = "Header">
+            <u> Background Information </u>
+            <div class = "Text"> 
+                When enrolling in AP Chemistry for the 2020-2021 academic year, we were tasked with memorizing all the material in the PDFs below. <br><br> Since we were often required to memorize 3 things at a time (Element, Abbreviation, charge) Quizlet would not have worked. So I decided to use Unity to make my own program with "3 sided" flashcards. <br><br> Since this was made quickly it isn't very intuitive so I'll explain how it works (some keybinds and options may not exist depending on the version you are using)
+            </div>
+            <div class = "Refit">  
+                <div class = "Header">
+                    <u> Material </u>
+                    <br>
+                    <div class = "Text">
+                        <div class = "Grid">
+                            <div class = "Grid-Item-1-3-4">Common elements, ions, and strong acids</div>
+                            <div class = "Grid-Item-2">Solubility Guidelines in Water</div>
+
+                            <div class = "Grid-Item-1-3-4"> <embed src="https://github.com/Busaba-Nicholas/Main/blob/main/AP%20Chemistry%20Flashcards/Material/Common%20elements%20and%20ions%20and%20strong%20acids%202020-21.pdf" width="95%" height="100%"> </div>
+                            <div class = "Grid-Item-1-3-4"> <embed src="https://github.com/Busaba-Nicholas/Main/blob/main/AP%20Chemistry%20Flashcards/Material/Solubility%20Guidelines%20in%20Water.pdf" width="95%" height="100%"> </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class = "Refit">
+                <div class = "Header">
+                    <u> Keybinds/Hotkeys: </u>
+                    <br>
+                    <div class = "Bullets">
+                        <div class = "Text">
+                            <li> left and right arrow keys to change flashcard </li>
+                            <li> up and down arrow keys to flip the 3 sided flashcard </li>
+                            <li> 'z' to 'm' changes the section of what you are studying (can also click the buttons at the bottom </li>
+                            <li> '1' to '3' change with flashcard is defaulted to when switching between them (slider at the top left also works) </li>
+                            <li> 'q' opens/closes the periodic table (can also click the button at the top right but it's a bit bugged) </li>
+                            <li> 'r' randomizes the order of the flashcards in that specific section from the number of the top slider to the number on the bottom slider (can also click randomize at the top right) </li>
+                            <li> 'e' resets randomization in that section </li>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class = "Refit">
+                <div class = "Header">
+                    <u> Side Notes for When Using It Below </u>
+                    <br>
+                    <div class = "Bullets">
+                        <div class = "Text">
+                            <li> Never tested on mobile </li>
+                            <li> Fullscreening can yeild better image quality </li>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class = "JustForOneThing"> Hi </div>
+            <div class = "Refit">
+                <div class = "Header">
+                    <u> Downloads for All Versions (Windows) </u>
+                    <br>
+                    <div class = "Bullets">
+                        <div class = "Text">
+                            <li> <a href="https://github.com/Busaba-Nicholas/Main/raw/main/AP%20Chemistry%20Flashcards/APChemStudy1.0.zip">Version 1.0</a> </li>
+                            <li> <a href="https://github.com/Busaba-Nicholas/Main/raw/main/AP%20Chemistry%20Flashcards/APChemStudy2.0.zip">Version 2.0</a> </li>
+                            <li> <a href="https://github.com/Busaba-Nicholas/Main/raw/main/AP%20Chemistry%20Flashcards/APChemStudy2.1.zip">Version 2.1</a> </li>
+                            <li> <a href="https://github.com/Busaba-Nicholas/Main/raw/main/AP%20Chemistry%20Flashcards/APChemStudy3.0.zip">Version 3.0</a> </li>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class = "Refit">
+                <div class = "Header">
+                    <u> Other Notes (Only for Dowloaded Versions) </u>
+                    <br>
+                    <div class = "Bullets">
+                        <div class = "Text">
+                            <li> Only supports 16:9 ratio, changing it causing graphical problems </li>
+                            <li> Not GPU optimized </li>
+                            <li> Only tested on Windows </li>
+                            <li> Alt + Enter can be used to enter and exit fullscreen </li>
+                       </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="webgl-content">
+            <div id="unityContainer" style="width: clamp(1vw, 1280px, 86vw); height: calc(9/16*clamp(1vw, 1280px, 86vw))"></div>
+            <div class="footer">
+                <div class="webgl-logo"></div>
+                <div class="fullscreen" onclick="unityInstance.SetFullscreen(1)"></div>
+                <div class="title">AP Chem Studying</div>
+            </div>
+        </div>
+
     </div>
-    
   </body>
 </html>
