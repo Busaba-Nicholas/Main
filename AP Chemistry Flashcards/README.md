@@ -20,6 +20,6 @@ Keybinds/Hotkeys:
   
 Other notes:
   - Only supports 16:9 ratio, changing it causing graphical problems
-  - Not GPU optimized at all
+  - Not GPU optimized
   - Only tested on Windows
   - Alt + Enter can be used to enter and exit fullscreen
