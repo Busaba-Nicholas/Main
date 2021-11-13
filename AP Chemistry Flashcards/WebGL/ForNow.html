@@ -1,0 +1,28 @@
+!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Unity WebGL Player | AP Chem Studying</title>
+    <link rel="shortcut icon" href="TemplateData/favicon.ico">
+    <link rel="stylesheet" href="TemplateData/style.css">
+    <script src="TemplateData/UnityProgress.js"></script>
+    <script src="Build/UnityLoader.js"></script>
+    <script>
+      var unityInstance = UnityLoader.instantiate("unityContainer", "Build/Files.json", {onProgress: UnityProgress});
+    </script>
+    <link rel="stylesheet" href="AP%20Chemistry%20Flashcards/WebGL/Fancy.css">
+    <link rel="stylesheet" href="Fancy.css">
+  </head>
+
+  <body>
+    <div class="webgl-content">
+            <div id="unityContainer" style="width: clamp(1vw, 1280px, 86vw); height: calc(9/16*clamp(1vw, 1280px, 86vw))"></div>
+            <div class="footer">
+            <div class="webgl-logo"></div>
+            <div class="fullscreen" onclick="unityInstance.SetFullscreen(1)"></div>
+            <div class="title">AP Chem Studying</div>
+        </div>
+    </div>
+  </body>
+</html>
