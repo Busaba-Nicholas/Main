@@ -3,23 +3,114 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <title>Unity WebGL Player | SchoolBell</title>
-    <link rel="shortcut icon" href="TemplateData/favicon.ico">
-    <link rel="stylesheet" href="TemplateData/style.css">
-    <script src="TemplateData/UnityProgress.js"></script>
+    <title>Nicholas Busaba's Website | SchoolBell </title>
+    <link rel="shortcut icon" href="../../OtherWebsiteFiles/favicon.ico">
+    <link rel="stylesheet" href="../../OtherWebsiteFiles/Fancy.css">
+    <script src="../../OtherWebsiteFiles/UnityProgress.js"></script>
     <script src="Build/UnityLoader.js"></script>
     <script>
       var unityInstance = UnityLoader.instantiate("unityContainer", "Build/WebGL.json", {onProgress: UnityProgress});
     </script>
   </head>
+
   <body>
-    <div class="webgl-content">
-      <div id="unityContainer" style="width: 1280px; height: 720px"></div>
-      <div class="footer">
-        <div class="webgl-logo"></div>
-        <div class="fullscreen" onclick="unityInstance.SetFullscreen(1)"></div>
-        <div class="title">SchoolBell</div>
-      </div>
+    <div class = "TOC-box Box">
+        Website Navigation
+        <div class = "TOC-text">
+            1. <a href="../../index.html">Home</a> <br>
+            2. <a href="../../AP Chemistry Flashcards/WebGL/index.html">Scuffed "Quizlet" for AP Chemistry</a> <br>
+            3. <a href="../../Computer Project Game/WebGL/index.html">Computer Project Game</a> <br>
+            4. <a href="../../English Trailer Video/index.html">English Trailer Video</a> <br>
+            5. <a href="../../Final History Project Video/index.html">Final Project History Video</a> <br>
+            6. <a href="../../History Invention Video/index.html">History Invention Video</a> <br>
+            7. <a href="../../Math Textbook GIF/index.html">One-off Gif for Math</a> <br>
+            8. <a href="">School Bell Simulation</a> <br>
+        </div>
     </div>
+
+    <div class = "Font-box Box" id = "fontBox">
+        If you would like to see a custom font, click this oval to toggle it.
+    </div>
+    
+    <div class = "Title Box">
+        <b>School Bell Simulation</b>
+        <div class = "Header">
+            <u> Background Information </u>
+            <div class = "Text"> 
+              When the pandemic started I originally used the alarms on my computer to get to class on time, but they had lots of problems. So, I made my own program using Unity that will allow me to customize when the bells ring relative to class starting and stopping.
+            </div>
+        </div>
+        <div class = "Header">
+            <u> Features Include </u>
+            <br>
+            <div class = "Bullets">
+                <div class = "Text">
+                    <li> Having the decision of whether or not the bell rings at the start or end of a certain period </li>
+                    <li> Having the bell ring up to two minutes earlier to get a warning </li>
+                    <li> Forcing the bell to ring when class starts/stops no matter the delay put </li>
+                    <li> Telling you the current time (on your pc) and current period </li>
+                </div>
+            </div>
+        </div>
+        <div class = "Header">
+            <u> Side Notes for When Using It Below </u>
+            <br>
+            <div class = "Bullets">
+                <div class = "Text">
+                    <li> Never tested on mobile </li>
+                    <li> Fullscreening can yeild better image quality </li>
+                </div>
+            </div>
+        </div>
+        <div class = "Header">
+            <u> What I Made (Version 3.1) </u> 
+            <br>
+            <div class="Header">
+                <div class="webgl-content">
+                    <div id="unityContainer" style="width: clamp(2vw, 1229px, 85vw); height: calc(9/16*clamp(2vw, 1229px, 85vw))"></div>
+                    <div class="footer">
+                        <div class="webgl-logo"></div>
+                        <div class="fullscreen" onclick="unityInstance.SetFullscreen(1)"></div>
+                        <div class="title">School Bell Simulation</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class = "Header">
+            <u> Downloads for All Versions (Windows) </u>
+            <br>
+            <div class = "Bullets">
+                <div class = "Text">
+                    <li> <a href="https://github.com/Busaba-Nicholas/Main/raw/main/School%20Bell%20Simulation/SchoolBell1.0.zip" style = "color: #8d2e2e">Version 1.0</a> </li>
+                    <li> <a href="https://github.com/Busaba-Nicholas/Main/raw/main/School%20Bell%20Simulation/SchoolBell1.1.zip" style = "color: #8d2e2e">Version 1.1</a> </li>
+                    <li> <a href="https://github.com/Busaba-Nicholas/Main/raw/main/School%20Bell%20Simulation/SchoolBell2.0.zip" style = "color: #8d2e2e">Version 2.0</a> </li>
+                    <li> <a href="https://github.com/Busaba-Nicholas/Main/raw/main/School%20Bell%20Simulation/SchoolBell2.1.zip" style = "color: #8d2e2e">Version 2.1</a> </li>
+                    <li> <a href="https://github.com/Busaba-Nicholas/Main/raw/main/School%20Bell%20Simulation/SchoolBell3.0.zip" style = "color: #8d2e2e">Version 3.0</a> </li>
+                    <li> <a href="https://github.com/Busaba-Nicholas/Main/raw/main/School%20Bell%20Simulation/SchoolBell3.1.zip" style = "color: #8d2e2e">Version 3.1</a> </li>
+                </div>
+            </div>
+        </div>
+        <div class = "Header">
+            <u> Other Notes (Only for Dowloaded Versions) </u>
+            <br>
+            <div class = "Bullets">
+                <div class = "Text">
+                    <li> Only supports 16:9 ratio, changing it causing graphical problems </li>
+                    <li> Only tested on Windows </li>
+                    <li> Alt + Enter can be used to enter and exit fullscreen </li>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class = "fot-Bottom Box" id = "fotter">
+        <div class = "fot-Text">Nicholas Busaba</div>
+        <div class = "fot-Text">Personal Projects</div>
+        <div class = "fot-Text">Scuffed "Quizlet" for AP Chemistry</div>
+        <div class = "fot-Text">Peronal Website Hosted on GitHub</div> 
+        <div class = "fot-Text"><b>Click this oval to return to the top</b></div>          
+    </div>
+
+    <script src="../../OtherWebsiteFiles/OtherElements.js"></script>
   </body>
 </html>
