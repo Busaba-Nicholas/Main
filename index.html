@@ -1,69 +1,122 @@
 <!DOCTYPE html>
-<html lang="en-us" style = "--Fotter-position:fixed; --Font:Times new Roman">
+<html lang="en-us">
   <head>
-    <title>Nicholas Busaba's Website | Home Page</title>
+    <title>Nicholas Busaba's Website</title>
     <link rel="stylesheet" href="OtherWebsiteFiles/Fancy.css">
+    <link rel="icon" href="OtherWebsiteFiles/favicon.png" type="image/x-icon">
+    <link rel="shortcut icon" href="OtherWebsiteFiles/favicon.png" type="image/x-icon">
+    <script src="./OtherWebsiteFiles/HeaderFooterMaker.js"></script>
   </head>
-  
-  <body>
-    <div class = "TOC-box Box">
-        Website Navigation
-        <div class = "TOC-text">
-            1. <a href="">Home</a> <br>
-            2. <a href="AP Chemistry Flashcards/WebGL/index.html">Scuffed "Quizlet" for AP Chemistry</a> <br>
-            3. <a href="Computer Project Game/WebGL/index.html">Computer Project Game</a> <br>
-            4. <a href="English Trailer Video/index.html">English Trailer Video</a> <br>
-            5. <a href="Final History Project Video/index.html">Final Project History Video</a> <br>
-            6. <a href="History Invention Video/index.html">History Invention Video</a> <br>
-            7. <a href="Math Textbook GIF/index.html">One-off Gif for Math</a> <br>
-            8. <a href="School Bell Simulation/WebGL/index.html">School Bell Simulation</a> <br>
-        </div>
-    </div>
 
-    <div class = "Font-box Box" id = "fontBox">
-        If you would like to see a custom font, click this oval to toggle it.
-    </div>
-    
-    <div class = "Title Box">
-        <b>Home Page</b>
-        <div class = "Header">
-            <u> Who am I? </u>
-            <div class = "Text"> 
-                My name is Nicholas Busaba. I am a senior attending Spackenkill Highschool and planning to pursue a degree in Computer Science/Engineering.
-                I enjoy video editing, animating, programming, and creating graphical applications.
-                Feel free to reach out to me at: "busabaN2014@verizon.net", I'll be glad to hear from you.  
-            </div>
+  <body>
+    <input type = "checkbox" id = "theme-toggle">
+    <input type = "checkbox" id = "Navbar-toggle">
+    <div id = "body_container">
+      <div id = "bootlegheader"> <script> makeHeader("./"); </script> </div>
+
+      <div class = "SectionStart">
+        <h1> Welcome </h1>
+        <div id = "WelcomeContent">
+          <img src = "./OtherWebsiteFiles/Me.jpg">
+          <div class = "GenericContentContainer">
+            <h2> Introduction </h2>
+            <p>
+              Hello, I'm Nicholas Busaba. I'm currently Sophmore attending Rensselaer Polytechnic Institute.
+              I'm a Computer Science and Information Technology Web Science Dual major. I've taken classes like
+              Data Structures to enhance my knowledge on trees, hasmaps, and lists along with the appropriate use
+              cases for all of them. I've also taken Intro to ITWS to learn the basics of web development and 
+              database management. I'm currently taking Computer Organization to learn about assembly and hardware
+              along with Web Systems Development to learn more about web development and cyber security.
+              <br><br>
+              In my free time I partake in ethical game hacking. This involves looking into low level hardware 
+              components of emulated hardware such as the RAM, CPU registers, assembly instructions, and setting
+              breakpoints appropriately. With this knowledge I've created many scripts and assembly edits to alter
+              the game's behavior. I've deeply learned concepts such pointers, registers, endianess, variable encoding,
+              memory alignment, and PowerPC assembly.
+              <br><br>
+              This website was created from the ground up for the sole purpose of showcasing what I've done.
+              Some of these may include school projects, or personal projects created because I'm passionate for 
+              the subject. All of these projects are below, and thanks to this website, are all easy to navigate through.
+            </p>
+          </div>
         </div>
-        <div class = "Header">
-            <u> Why This was made </u>
-            <div class = "Text"> 
-                To share the work I've created I made a <a href="https://github.com/Busaba-Nicholas/Main">Github</a> page.
-                I then learned that Github can host websites.
-                I originally used it to have my Unity projects usable without downloading, but I then realized I could go further and decided to make everything easier to use for people like you and make a full-on website.
+      </div>
+
+      <div class = "SectionStart">
+        <h1> Projects </h1>
+        <div id = "Projects">
+          <div class = "GenericContentContainer">
+            <h2> 3 Sided Flashcards for Studying </h2>
+            <img src = "./OtherWebsiteFiles/Projects/Chem.png">
+            <p>
+              A unity project created for the sole purpose of enhancing my studying abilities.
+              A tool for 3 sided flashcards, that alternatives like Quizlet couldn't do, to allow studying 
+              for all possibilities for an upcoming exam.
+            </p>
+            <div class = "Button">
+              <a href = "./AP Chemistry Flashcards/index.html"> Project Link </a>
             </div>
-        </div>
-        <div class = "Header">
-            <u> How this was made </u>
-            <div class = "Text"> 
-                To enhance my website development skills, I built this from the ground up without using a template.
+          </div>
+          <div class = "GenericContentContainer">
+            <h2> APCSA Game Project </h2>
+            <img src = "./OtherWebsiteFiles/Projects/Game.png">
+            <p>
+              A final project for APCSA that ended up being my first experience with a game engine. A 2D platformer
+              with tight movement and easy to read enviroments to make for challenging but fair gameplay.
+            </p>
+            <div class = "Button">
+              <a href = "./Computer Project Game/index.html"> Project Link </a>
             </div>
-        </div>
-        <div class = "Header">
-            <u> Where to find my personal projects </u>
-            <div class = "Text"> 
-                Scroll up to the top of the page (or click the purple oval below) and pick the link for whichever project you would like to see/learn more about.
+          </div>
+          <div class = "GenericContentContainer">
+            <h2> First Video Project </h2>
+            <img src = "./OtherWebsiteFiles/Projects/Trailer.png">
+            <p>
+              A simple illustration turning into my first time using Adobe. Messing with timelines, multiple video
+              layers, recording my own voice, and even animation. A humble beginning.
+            </p>
+            <div class = "Button">
+              <a href = "./English Trailer Video/index.html"> Project Link </a>
             </div>
+          </div>
+          <div class = "GenericContentContainer">
+            <h2> History Final Project </h2>
+            <img src = "./OtherWebsiteFiles/Projects/Decade.png">
+            <p>
+              My demonstration of hard work for a final project. A video meant to inform and entertain. Proper visuals meant to 
+              amplify what's being said with easy to digest images.
+            </p>
+            <div class = "Button">
+              <a href = "./Final History Project Video/index.html"> Project Link </a>
+            </div>
+          </div>
+          <div class = "GenericContentContainer">
+            <h2> School Bell Simulator for Covid </h2>
+            <img src = "./OtherWebsiteFiles/Projects/Bell.png">
+            <p>
+              A project created solely in my own time. A project meant to assist me in getting to remote classes on time
+              along with customization to accomdate for my classes during the day and personal preferences.
+            </p>
+            <div class = "Button">
+              <a href = "./School Bell Simulation/index.html"> Project Link </a>
+            </div>
+          </div>
+          <div class = "GenericContentContainer">
+            <h2> Yarn Revolution Video </h2>
+            <img src = "./OtherWebsiteFiles/Projects/Yarn.png">
+            <p>
+              A quick and entertaining video pretaining to an industrial revolution invention. A video filled with jokes
+              to get the point across and a voiceover to go along with the visuals. A video so entertaining the whole class
+              laughed upon watching it.
+            </p>
+            <div class = "Button">
+              <a href = "./History Invention Video/index.html"> Project Link </a>
+            </div>
+          </div>
         </div>
-    </div>
-    
-    <div class = "fot-Bottom Box" id = "fotter">
-        <div class = "fot-Text">Nicholas Busaba</div>
-        <div class = "fot-Text">Personal Projects</div>
-        <div class = "fot-Text">Home Page</div>
-        <div class = "fot-Text">Peronal Website Hosted on GitHub</div> 
-        <div class = "fot-Text"><b>Click this oval to return to the top</b></div>          
+      </div>
+
+      <footer> <script> makeFooter("Home"); </script> </footer>
     </div>
   </body>
-
-  <script src="OtherWebsiteFiles/OtherElements.js"></script>
 </html>

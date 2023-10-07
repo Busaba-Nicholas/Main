@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <title>Nicholas Busaba's Website | School Bell Simulator </title>
+    <link rel="stylesheet" href="../OtherWebsiteFiles/Fancy.css">
+    <link rel="icon" href="../OtherWebsiteFiles/favicon.png" type="image/x-icon">
+    <link rel="shortcut icon" href="../OtherWebsiteFiles/favicon.png" type="image/x-icon">
+    <script src="../OtherWebsiteFiles/HeaderFooterMaker.js"></script>
+
+    <link rel="stylesheet" href="../OtherWebsiteFiles/Unity/style.css">
+    <script src="../OtherWebsiteFiles/Unity/UnityProgress.js"></script>
+    <script src="Build/UnityLoader.js"></script>
+    <script>
+      var unityInstance = UnityLoader.instantiate("unityContainer", "Build/WebGL.json", {onProgress: UnityProgress});
+    </script>
+  </head>
+
+  <body>
+    <input type = "checkbox" id = "theme-toggle">
+    <input type = "checkbox" id = "Navbar-toggle">
+    <div id = "body_container">
+      <div id = "bootlegheader"> <script> makeHeader("../"); </script> </div>
+
+      <h1> School Bell Simulator </h1>
+
+      <div class = "SectionStart">
+        <h1> Background Information </h1>
+        <div id = "APChem_Background">
+          <div class = "GenericContentContainer">
+            <h2> Context </h2>
+            <p>
+              Covid-19 needs no introduction. But as a quick reminder, school was moved to remote classes instead of
+              being in person. One of the results of this was the lack of a school bell to inform you when classes
+              start/end. Computer alarms get the job done, but leave a lot to be desired. They quiet the other audio
+              playing on your computer just to play their sound. In addition, the interface for the alarms is very bad
+              and annoying to use. Before even getting alarms I also came to class late on more than one occasion.
+              So I made a Unity program to solve all of these problems.
+              <br><br>
+              The program will highlight what period is currently in place, allow for alarms at the start and end of class,
+              and even allow it to ring earlier for up to two minutes. If the bell is to ring it will play a quick sound
+              and proceed on as normal. 
+            </p>
+          </div>
+          <div class = "GenericContentContainer">
+            <h2> Functionality and Final Result </h2>
+            <ul>
+              <li> A dropdown menu at the top right to change the school's schedule </li>
+              <li> A blue highlight on the current period </li>
+              <li> Toggles to decide if the bell rings at the start/end of the selected period </li>
+              <li> A slider for the ability for a delay of up to two minutes on the bell </li>
+              <li> Another toggle to allow for the bell to ring on delay and on time </li>
+              <li> A school schedule to show what type of day it is today (odd/even) </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class = "SectionStart">
+        <h1> Program </h1>
+        <div id = "ProgramDownloadWebGL">
+          <div class = "GenericContentContainer">
+            <h2> Downloads (Windows) </h2>
+            <ul>
+              <li> <a href="SchoolBell1.0.zip"> Version 1.0 </a> </li>
+              <li> <a href="SchoolBell1.1.zip"> Version 1.1 </a> </li>
+              <li> <a href="SchoolBell2.0.zip"> Version 2.0 </a> </li>
+              <li> <a href="SchoolBell2.1.zip"> Version 2.1 </a> </li>
+              <li> <a href="SchoolBell3.0.zip"> Version 3.0 </a> </li>
+              <li> <a href="SchoolBell3.1.zip"> Version 3.1 </a> </li>
+            </ul>
+          </div>
+          <div class = "GenericContentContainer">
+            <h2> WebGL Application (Version 3.1) </h2>
+            <div class="webgl-content">
+              <div id="unityContainer"></div>
+              <div class="footer">
+                <div class="webgl-logo"></div>
+                <div class="fullscreen" onclick="unityInstance.SetFullscreen(1)"></div>
+                <div class="title">School Bell Simulation</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <footer> <script> makeFooter("School Bell Simulator"); </script> </footer>
+    </div>
+  </body>
+</html>

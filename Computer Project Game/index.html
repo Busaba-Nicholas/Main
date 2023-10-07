@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <title>Nicholas Busaba's Website | Computer Game </title>
+    <link rel="stylesheet" href="../OtherWebsiteFiles/Fancy.css">
+    <link rel="icon" href="../OtherWebsiteFiles/favicon.png" type="image/x-icon">
+    <link rel="shortcut icon" href="../OtherWebsiteFiles/favicon.png" type="image/x-icon">
+    <script src="../OtherWebsiteFiles/HeaderFooterMaker.js"></script>
+
+    <link rel="stylesheet" href="../OtherWebsiteFiles/Unity/style.css">
+    <script src="../OtherWebsiteFiles/Unity/UnityProgress.js"></script>
+    <script src="Build/UnityLoader.js"></script>
+    <script>
+      var unityInstance = UnityLoader.instantiate("unityContainer", "Build/WebGL.json", {onProgress: UnityProgress});
+    </script>
+  </head>
+
+  <body>
+    <input type = "checkbox" id = "theme-toggle">
+    <input type = "checkbox" id = "Navbar-toggle">
+    <div id = "body_container">
+      <div id = "bootlegheader"> <script> makeHeader("../"); </script> </div>
+
+      <h1> Computer Project Game </h1>
+
+      <div class = "SectionStart">
+        <h1> Background Information </h1>
+        <div id = "APChem_Background">
+          <div class = "GenericContentContainer">
+            <h2> Context </h2>
+            <p>
+              During Sophmore year of high school I was taking AP Computer Science A. At the end of the school
+              year the professor said that we could do whatever programmming related task we wanted as long as 
+              we learned something new from the process. Being familiar with Unity's existance and nothing more
+              I decided to make my project revolve around learning the engine.
+              <br><br>
+              Upon looking back at some of my favorite videogames as a kid I realized that platformers were a 
+              decently sized portion of it. So I decided to make a 2D platformer to end up aligning with the time
+              I had.
+              <br><br>
+              I used an <a href="https://www.youtube.com/watch?v=86Bgt--Ww7w"> online video tutorial </a> to assit
+              in the creation of the Unity Project. I learned a lot of the basics of Unity from it in a quick fasion.
+              Although the time crunch of the assigment still caught up to me and I wasn't able to complete everything I
+              orignally wanted. So there are some unused mechanics. Despite all of that, I'm happy with the final
+              result.
+            </p>
+          </div>
+          <div class = "GenericContentContainer">
+            <h2> Final Result </h2>
+            <ul>
+              <li> A 2D platformer where you take control of a ball. </li>
+              <li> Platforms of multiple different colors with their own unique gimmick. </li>
+              <li> Physics that is relatively based. So speed is never abruptly slowed down when preforming certain actions. </li>
+              <li> Ball rotations that conveyed how the ball is currently moving. </li>
+              <li> Roughly 10 levels with automatic checkpoint systems. </li>
+              <li> Changing sprite to easily and quickly convey the current state of the player. </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- keyboard: https://www.pngitem.com/middle/TiRombb_png-keyboard-keys-keyboard-keys-transparent-png/ -->
+      <div class = "SectionStart">
+        <h1> Relevant Keys </h1>
+        <div id = "Keyboard">
+          <div class = "GenericContentContainer">
+            <input type="radio" id="Keyboard_up" name="key" checked>
+            <input type="radio" id="Keyboard_down" name="key">
+            <input type="radio" id="Keyboard_left" name="key">
+            <input type="radio" id="Keyboard_right" name="key">
+            <input type="radio" id="Keyboard_altenter" name="key">
+            <input type="radio" id="Keyboard_debugMovement" name="key">
+            <div id = "KeyboardAbsolute">
+              <div></div>
+              <div></div>
+              <div></div>
+              <div>
+                <label for="Keyboard_up" style="margin-left: calc(7% + 4.45% * 1);"></label>
+              </div>
+              <div>
+                <label for="Keyboard_left" style="margin-left: calc(7.8%);"></label>
+                <label for="Keyboard_down" style="margin-left: calc(7.8% + 4.5%);"></label>
+                <label for="Keyboard_right" style="margin-left: calc(7.8% + 9%);"></label>
+                <label for="Keyboard_altenter" style="margin-left: calc(57%); width: 9.2%;"></label>
+              </div>
+              <div>
+                <label for="Keyboard_debugMovement" style="margin-left: calc(10.9% + 4.45% * 6);"></label>
+                <label for="Keyboard_debugMovement" style="margin-left: calc(67.4% + 4.45% * 1);"></label>
+              </div>
+              <div>
+                <label for="Keyboard_altenter" style="margin-left: calc(12.7%); width: 6%"></label>
+                <label for="Keyboard_debugMovement" style="margin-left: calc(18.8%); width: 23.9%"></label>
+                <label for="Keyboard_debugMovement" style="margin-left: calc(67.4% + 4.45% * 0);"></label>
+                <label for="Keyboard_debugMovement" style="margin-left: calc(67.4% + 4.45% * 1);"></label>
+                <label for="Keyboard_debugMovement" style="margin-left: calc(67.4% + 4.45% * 2);"></label>
+              </div>
+            </div>
+            <img alt = "interactableKeyboard" src = "../OtherWebsiteFiles/Keyboard.png">
+            
+            <div class = "Keyboard_up">
+              <h2> w key </h2>
+              <p> Allows you to jump, double jump, wall jump (watch the sprite), and fall slightly slower </p>
+            </div>
+            <div class = "Keyboard_down">
+              <h2> s key </h2>
+              <p> Allows you to fall faster in the air and morph on the ground to jump higher </p>
+            </div>
+            <div class = "Keyboard_left">
+              <h2> a key </h2>
+              <p> Allows you to roll to the left </p>
+            </div>
+            <div class = "Keyboard_right">
+              <h2> d key </h2>
+              <p> Allows you to roll to the right </p>
+            </div>
+            <div class = "Keyboard_altenter">
+              <h2> Alt + Enter keys </h2>
+              <p> Fullscreen the applications (only works if downloaded) </p>
+            </div>
+            <div class = "Keyboard_debugMovement">
+              <h2> m + space + any arrow key </h2>
+              <p> Disables gravity and allows you to fly around </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class = "SectionStart">
+        <h1> Program </h1>
+        <div id = "ProgramDownloadWebGL">
+          <div class = "GenericContentContainer">
+            <h2> Downloads (Windows) </h2>
+            <ul>
+              <li> <a href="Game.zip"> Version 1.0 </a> </li>
+            </ul>
+          </div>
+          <div class = "GenericContentContainer">
+            <h2> WebGL Application (Version 1.0) </h2>
+            <div class="webgl-content">
+              <div id="unityContainer"></div>
+              <div class="footer">
+                <div class="webgl-logo"></div>
+                <div class="fullscreen" onclick="unityInstance.SetFullscreen(1)"></div>
+                <div class="title">FinalProject</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <footer> <script> makeFooter("Computer Project Game"); </script> </footer>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,176 @@
+<html lang="en-us" style = "--Fotter-position:fixed; --Font:Times new Roman">
+
+<!-- <body>
+    <div class = "TOC-box Box">
+        Website Navigation
+        <div class = "TOC-text">
+            1. <a href="">Home</a> <br>
+            2. <a href="AP Chemistry Flashcards/WebGL/index.html">Scuffed "Quizlet" for AP Chemistry</a> <br>
+            3. <a href="Computer Project Game/WebGL/index.html">Computer Project Game</a> <br>
+            4. <a href="English Trailer Video/index.html">English Trailer Video</a> <br>
+            5. <a href="Final History Project Video/index.html">Final Project History Video</a> <br>
+            6. <a href="History Invention Video/index.html">History Invention Video</a> <br>
+            7. <a href="Math Textbook GIF/index.html">One-off Gif for Math</a> <br>
+            8. <a href="School Bell Simulation/WebGL/index.html">School Bell Simulation</a> <br>
+        </div>
+    </div>
+
+    <div class = "Font-box Box" id = "fontBox">
+        If you would like to see a custom font, click this oval to toggle it.
+    </div>
+    
+    <div class = "Title Box">
+        <b>Home Page</b>
+        <div class = "Header">
+            <u> Who am I? </u>
+            <div class = "Text"> 
+                My name is Nicholas Busaba. I am a senior attending Spackenkill Highschool and planning to pursue a degree in Computer Science/Engineering.
+                I enjoy video editing, animating, programming, and creating graphical applications.
+                Feel free to reach out to me at: "busabaN2014@verizon.net", I'll be glad to hear from you.  
+            </div>
+        </div>
+        <div class = "Header">
+            <u> Why This was made </u>
+            <div class = "Text"> 
+                To share the work I've created I made a <a href="https://github.com/Busaba-Nicholas/Main">Github</a> page.
+                I then learned that Github can host websites.
+                I originally used it to have my Unity projects usable without downloading, but I then realized I could go further and decided to make everything easier to use for people like you and make a full-on website.
+            </div>
+        </div>
+        <div class = "Header">
+            <u> How this was made </u>
+            <div class = "Text"> 
+                To enhance my website development skills, I built this from the ground up without using a template.
+            </div>
+        </div>
+        <div class = "Header">
+            <u> Where to find my personal projects </u>
+            <div class = "Text"> 
+                Scroll up to the top of the page (or click the purple oval below) and pick the link for whichever project you would like to see/learn more about.
+            </div>
+        </div>
+    </div>
+    
+    <div class = "fot-Bottom Box" id = "fotter">
+        <div class = "fot-Text">Nicholas Busaba</div>
+        <div class = "fot-Text">Personal Projects</div>
+        <div class = "fot-Text">Home Page</div>
+        <div class = "fot-Text">Peronal Website Hosted on GitHub</div> 
+        <div class = "fot-Text"><b>Click this oval to return to the top</b></div>          
+    </div>
+  </body>
+
+  <script src="OtherWebsiteFiles/OtherElements.js"></script> -->
+
+
+:root {
+	--Offset-x: 2%;
+	--Offset-y: 1%;
+	--Title-center: max(5vw, 50%);
+	background-color: #9400D3;
+}
+body {
+	margin: 0px;
+	height: 100%;
+	color: #000000;
+}
+.Box {
+	position: relative;
+	left: var(--Title-center);
+  	transform: translate(calc(-1*var(--Title-center)), 0%);
+	margin-top: 20px;
+	text-align: left;
+	font-size:30px;
+
+	width: min(90vw, 1280px);
+	/*color: #000;
+  	background-color: #b35000;*/
+  	padding: min(20px, 4vw);
+  	border-radius: calc(min(20px, 4vw)*5/2);
+}
+
+@font-face{
+    font-family: "Binary";
+    src: url('binxchr.ttf');
+}
+
+.Title {
+  font-family: var(--Font);
+  font-size: 70px;
+  
+  color: #1a9900;
+  background-color: #000;
+}
+.Header {
+  margin-top: var(--Offset-y);
+  margin-left: var(--Offset-x);
+  font-size: 40px;
+}
+.Text {
+  margin-top: var(--Offset-y);
+  margin-left: var(--Offset-x);
+  font-size: 25px;
+}
+
+.Grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /*620px*/
+  grid-template-rows: max-content 640px;
+  /*grid-template-rows: 40px 640px;*/
+  /*background-color: #2196F3;*/
+}
+.Grid-Item {
+  /*background-color: rgba(255, 255, 255);
+  border: 1px solid rgb(0, 0, 0);*/
+  margin-top: calc(var(--Offset-y)*1.5);
+  font-size: 30px;
+  text-align: center;
+}
+
+/*.ul.Bullets {
+	list-style-type: circle;
+}*/
+/*visibility: hidden;*/
+
+.TOC-box {
+	color: #000;
+  	background-color: #b35000;
+}
+.TOC-text {
+	margin-top: var(--Offset-y);
+  	margin-left: var(--Offset-x);
+}
+
+.Font-box {
+	color: #000;
+  	background-color: #00adb3;
+}
+
+.fot-Bottom {
+	padding: 0px;
+	border: min(20px, 4vw) solid;
+	border-color: #00008B;
+	background-color: #4c4cff;
+	margin-bottom: 20px;
+}
+.fot-Text {
+	text-align: center;
+	margin-left: 15px;
+	font-size: min(30px, 6vw);
+	line-height: 50px;
+}
+
+
+document.getElementById('fontBox').addEventListener("click", () => {
+	if (font == 0) {
+    document.documentElement.style.setProperty('--Font', 'Times new Roman');
+    font = 1;
+  } else {
+    document.documentElement.style.setProperty('--Font', 'Binary');
+    font = 0;
+  }
+});
+
+document.getElementById('fotter').addEventListener("click", () => {
+	window.scrollTo(0,0)
+});

@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <title>Nicholas Busaba's Website | 3 Sided Flashcards </title>
+    <link rel="stylesheet" href="../OtherWebsiteFiles/Fancy.css">
+    <link rel="icon" href="../OtherWebsiteFiles/favicon.png" type="image/x-icon">
+    <link rel="shortcut icon" href="../OtherWebsiteFiles/favicon.png" type="image/x-icon">
+    <script src="../OtherWebsiteFiles/HeaderFooterMaker.js"></script>
+
+    <link rel="stylesheet" href="../OtherWebsiteFiles/Unity/style.css">
+    <script src="../OtherWebsiteFiles/Unity/UnityProgress.js"></script>
+    <script src="Build/UnityLoader.js"></script>
+    <script>
+      var unityInstance = UnityLoader.instantiate("unityContainer", "Build/Files.json", {onProgress: UnityProgress});
+    </script>
+  </head>
+
+  <body>
+    <input type = "checkbox" id = "theme-toggle">
+    <input type = "checkbox" id = "Navbar-toggle">
+    <div id = "body_container">
+      <div id = "bootlegheader"> <script> makeHeader("../"); </script> </div>
+
+      <h1> 3 Sided Flashcard Program </h1>
+
+      <div class = "SectionStart">
+        <h1> Background Information </h1>
+        <div id = "APChem_Background">
+          <div class = "GenericContentContainer">
+            <h2> Context </h2>
+            <p>
+              I enrolled to AP Chemistry for the 2020-2021 academic year. We are expected to have
+              a baseline of knowledge. To enfore this the professor provided us with material to 
+              study over the summer and he would give a quiz on said material.
+              <br><br>
+              When looking over what had to be studied I came to the realzations that there are 
+              three different aspects to what needed to be known. Since the way the quiz would be
+              structured was unknown, we didn't know what exactly would be asked and in what way.
+              Usually I would use Quizlet, but that was restricted to two sided flashcards. I needed
+              a third side.
+              <br><br>
+              To solve this problem I used my skills with Unity to create something that is the 
+              equivalent of three sided flashcards. Down the line I also made a section for solubility
+              guidelines and had a toggleable image for the periodic table.
+              <br><br>
+              Nearby you'll see a pdf with all the content that we needed to study over the Summer.
+              I moved all of this content into the Unity project diving everything up on all 
+              3 sides of the "flashcards".
+            </p>
+          </div>
+          <div class = "GenericContentContainer">
+            <h2> Study Material </h2>
+            <embed src="Material/Combined.pdf">
+          </div>
+        </div>
+      </div>
+
+      <!-- keyboard: https://www.pngitem.com/middle/TiRombb_png-keyboard-keys-keyboard-keys-transparent-png/ -->
+      <div class = "SectionStart">
+        <h1> Relevant Keys </h1>
+        <div id = "Keyboard">
+          <div class = "GenericContentContainer">
+            <input type="radio" id="Keyboard_1" name="key" checked>
+            <input type="radio" id="Keyboard_2" name="key">
+            <input type="radio" id="Keyboard_3" name="key">
+            <input type="radio" id="Keyboard_z" name="key">
+            <input type="radio" id="Keyboard_x" name="key">
+            <input type="radio" id="Keyboard_c" name="key">
+            <input type="radio" id="Keyboard_v" name="key">
+            <input type="radio" id="Keyboard_b" name="key">
+            <input type="radio" id="Keyboard_n" name="key">
+            <input type="radio" id="Keyboard_m" name="key">
+            <input type="radio" id="Keyboard_q" name="key">
+            <input type="radio" id="Keyboard_r" name="key">
+            <input type="radio" id="Keyboard_e" name="key">
+            <input type="radio" id="Keyboard_up" name="key">
+            <input type="radio" id="Keyboard_down" name="key">
+            <input type="radio" id="Keyboard_left" name="key">
+            <input type="radio" id="Keyboard_right" name="key">
+            <input type="radio" id="Keyboard_altenter" name="key">
+            <div id = "KeyboardAbsolute">
+              <div></div>
+              <div></div>
+              <div>
+                <label for="Keyboard_1" style="margin-left: calc(4.5% * 1);"></label>
+                <label for="Keyboard_2" style="margin-left: calc(4.5% * 2);"></label>
+                <label for="Keyboard_3" style="margin-left: calc(4.5% * 3);"></label>
+              </div>
+              <div>
+                <label for="Keyboard_q" style="margin-left: calc(7%);"></label>
+                <label for="Keyboard_up" style="margin-left: calc(7% + 4.45% * 1);"></label>
+                <label for="Keyboard_r" style="margin-left: calc(7% + 4.45% * 3);"></label>
+                <label for="Keyboard_e" style="margin-left: calc(7% + 4.45% * 2);"></label>
+              </div>
+              <div>
+                <label for="Keyboard_left" style="margin-left: calc(7.8%);"></label>
+                <label for="Keyboard_down" style="margin-left: calc(7.8% + 4.5%);"></label>
+                <label for="Keyboard_right" style="margin-left: calc(7.8% + 9%);"></label>
+                <label for="Keyboard_altenter" style="margin-left: calc(57%); width: 9.2%;"></label>
+              </div>
+              <div>
+                <label for="Keyboard_z" style="margin-left: calc(10.9% + 4.45% * 0);"></label>
+                <label for="Keyboard_x" style="margin-left: calc(10.9% + 4.45% * 1);"></label>
+                <label for="Keyboard_c" style="margin-left: calc(10.9% + 4.45% * 2);"></label>
+                <label for="Keyboard_v" style="margin-left: calc(10.9% + 4.45% * 3);"></label>
+                <label for="Keyboard_b" style="margin-left: calc(10.9% + 4.45% * 4);"></label>
+                <label for="Keyboard_n" style="margin-left: calc(10.9% + 4.45% * 5);"></label>
+                <label for="Keyboard_m" style="margin-left: calc(10.9% + 4.45% * 6);"></label>
+                <label for="Keyboard_up" style="margin-left: calc(67.4% + 4.45% * 1);"></label>
+              </div>
+              <div>
+                <label for="Keyboard_altenter" style="margin-left: calc(12.7%); width: 6%"></label>
+                <label for="Keyboard_left" style="margin-left: calc(67.4% + 4.45% * 0);"></label>
+                <label for="Keyboard_down" style="margin-left: calc(67.4% + 4.45% * 1);"></label>
+                <label for="Keyboard_right" style="margin-left: calc(67.4% + 4.45% * 2);"></label>
+              </div>
+            </div>
+            <img alt = "interactableKeyboard" src = "../OtherWebsiteFiles/Keyboard.png">
+            
+            <div class = "Keyboard_1">
+              <h2> 1 key </h2>
+              <p> Makes default side of the flashcard the first side. Takes affect when switching cards. </p>
+            </div>
+            <div class = "Keyboard_2">
+              <h2> 2 key </h2>
+              <p> Makes default side of the flashcard the second side. Takes affect when switching cards. </p>
+            </div>
+            <div class = "Keyboard_3">
+              <h2> 3 key </h2>
+              <p> Makes default side of the flashcard the third side. Takes affect when switching cards. </p>
+            </div>
+            <div class = "Keyboard_z">
+              <h2> z key </h2>
+              <p> Changes Study material to Elements </p>
+            </div>
+            <div class = "Keyboard_x">
+              <h2> x key </h2>
+              <p> Changes Study material to Monoatomic Cations </p>
+            </div>
+            <div class = "Keyboard_c">
+              <h2> c key </h2>
+              <p> Changes Study material to Monoatomic Anions </p>
+            </div>
+            <div class = "Keyboard_v">
+              <h2> v key </h2>
+              <p> Changes Study material to Variable Charges </p>
+            </div>
+            <div class = "Keyboard_b">
+              <h2> b key </h2>
+              <p> Changes Study material to Polyatomic Ions </p>
+            </div>
+            <div class = "Keyboard_n">
+              <h2> n key </h2>
+              <p> Changes Study material to Strong Acids </p>
+            </div>
+            <div class = "Keyboard_m">
+              <h2> m key </h2>
+              <p> Changes Study material to Solubility Guildlines </p>
+            </div>
+            <div class = "Keyboard_q">
+              <h2> q key </h2>
+              <p> Toggles the Periodic Table visibility </p>
+            </div>
+            <div class = "Keyboard_r">
+              <h2> r key </h2>
+              <p> Randomizes the elements in the current section within the range of the sliders on the top right of the screen. </p>
+            </div>
+            <div class = "Keyboard_e">
+              <h2> e key </h2>
+              <p> Resets all randomization and returns everything to what it was originally </p>
+            </div>
+            <div class = "Keyboard_up">
+              <h2> w or up arrow key </h2>
+              <p> Flip the flashcard upward </p>
+            </div>
+            <div class = "Keyboard_down">
+              <h2> s or down arrow key </h2>
+              <p> Flip the flashcard downward </p>
+            </div>
+            <div class = "Keyboard_left">
+              <h2> a or left arrow key </h2>
+              <p> Change to the next flashcard </p>
+            </div>
+            <div class = "Keyboard_right">
+              <h2> d or right arrow key </h2>
+              <p> Change to the previous flashcard </p>
+            </div>
+            <div class = "Keyboard_altenter">
+              <h2> Alt + Enter keys </h2>
+              <p> Fullscreen the applications (only works if downloaded) </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class = "SectionStart">
+        <h1> Program </h1>
+        <div id = "ProgramDownloadWebGL">
+          <div class = "GenericContentContainer">
+            <h2> Downloads (Windows) </h2>
+            <ul>
+              <li> <a href="APChemStudy1.0.zip"> Version 1.0 </a> </li>
+              <li> <a href="APChemStudy2.0.zip"> Version 2.0 </a> </li>
+              <li> <a href="APChemStudy2.1.zip"> Version 2.1 </a> </li>
+              <li> <a href="APChemStudy3.0.zip"> Version 3.0 </a> </li>
+            </ul>
+          </div>
+          <div class = "GenericContentContainer">
+            <h2> WebGL Application (Version 3.0) </h2>
+            <div class="webgl-content">
+              <div id="unityContainer"></div>
+              <div class="footer">
+                <div class="webgl-logo"></div>
+                <div class="fullscreen" onclick="unityInstance.SetFullscreen(1)"></div>
+                <div class="title">AP Chem Studying</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <footer> <script> makeFooter("3 Sided Flashcards"); </script> </footer>
+    </div>
+  </body>
+</html>

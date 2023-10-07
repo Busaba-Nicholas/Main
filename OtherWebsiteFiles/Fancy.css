@@ -1,118 +1,487 @@
-/* python -m http.server --cgi 8360 
-<style type="text/css">* { padding: 0; margin: 0; }</style>*/
+/* --------------- Color for Theme Setup ------------------------- */
 
 :root {
-	--Offset-x: 2%;
-	--Offset-y: 1%;
-	--Title-center: max(5vw, 50%);
-	background-color: #9400D3;
+	--Dark-backgroundColor: #292929;
+	--Dark-textColorSecondary: #fff;
+	--Dark-ButtonColor: #0087bd;/*#c38fff;*/
+	--Dark-ButtonBorderColor: #cea3ff;
+	--Dark-ButtonTextColor: #000;
+	--Dark-HeaderBackgroundColor: #121212;
+	--Dark-HeaderTextColor: #f8f2ff;
+	--Dark-NavBoxColor: #242424;
+	--Dark-ContentBoxColor: #1a1a1a;
+	--Dark-linkColor: #2f81f7;
+	--Dark-linkVisitedColor: #b668ff;
+
+	--Light-backgroundColor: #e5e5e5;
+	--Light-textColorSecondary: #000;
+	--Light-ButtonColor: #0087bd;
+	--Light-ButtonBorderColor: #cea3ff;
+	--Light-ButtonTextColor: #000;
+	--Light-HeaderBackgroundColor: #bd71ff;
+	--Light-HeaderTextColor: #000;
+	--Light-NavBoxColor: rgb(235, 235, 235);
+	--Light-ContentBoxColor: #d4d4d4;
+	--Light-linkColor: #0000ee;
+	--Light-linkVisitedColor: #551a8b;
+
+	--backgroundColor: var(--Dark-backgroundColor);
+	--textColorSecondary: var(--Dark-textColorSecondary);
+	--ButtonColor: var(--Dark-ButtonColor);
+	--ButtonBorderColor: var(--Dark-ButtonBorderColor);
+	--ButtonTextColor: var(--Dark-ButtonTextColor);
+	--HeaderBackgroundColor: var(--Dark-HeaderBackgroundColor);
+	--HeaderTextColor: var(--Dark-HeaderTextColor);
+	--NavBoxColor: var(--Dark-NavBoxColor);
+	--ContentBoxColor: var(--Dark-ContentBoxColor);
+	--linkColor: var(--Dark-linkColor);
+	--linkVisitedColor: var(--Dark-linkVisitedColor);
 }
-body {
-	margin: 0px;
-	height: 100%;
-	color: #000000;
+#ThemeContainer { display: none; }
+
+/* --------------- Theme Toggling ------------------------- */
+
+body { margin: 0; }
+a { color: var(--linkColor); }
+a:visited { color: var(--linkVisitedColor); }
+#body_container {
+	min-height: 100vh;
+	height: max-content;
+	display: flex;
+  	flex-direction: column;
+	background-color: var(--backgroundColor);
 }
-.Box {
+@media (prefers-color-scheme: dark) {
+	#body_container {
+		--backgroundColor: var(--Dark-backgroundColor);
+		--textColorSecondary: var(--Dark-textColorSecondary);
+		--ButtonColor: var(--Dark-ButtonColor);
+		--ButtonBorderColor: var(--Dark-ButtonBorderColor);
+		--ButtonTextColor: var(--Dark-ButtonTextColor);
+		--HeaderBackgroundColor: var(--Dark-HeaderBackgroundColor);
+		--HeaderTextColor: var(--Dark-HeaderTextColor);
+		--NavBoxColor: var(--Dark-NavBoxColor);
+		--ContentBoxColor: var(--Dark-ContentBoxColor);
+		--linkColor: var(--Dark-linkColor);
+		--linkVisitedColor: var(--Dark-linkVisitedColor);
+	}
+	#ThemeContainer { display: block; }
+	.themeTextLight { display: block; }
+	.themeTextDark { display: none; }
+	#theme-toggle:checked ~ #body_container .themeTextLight { display: none; }
+	#theme-toggle:checked ~ #body_container .themeTextDark { display: block; }
+	#theme-toggle:checked ~ #body_container {
+		--backgroundColor: var(--Light-backgroundColor);
+		--textColorSecondary: var(--Light-textColorSecondary);
+		--ButtonColor: var(--Light-ButtonColor);
+		--ButtonBorderColor: var(--Light-ButtonBorderColor);
+		--ButtonTextColor: var(--Light-ButtonTextColor);
+		--HeaderBackgroundColor: var(--Light-HeaderBackgroundColor);
+		--HeaderTextColor: var(--Light-HeaderTextColor);
+		--NavBoxColor: var(--Light-NavBoxColor);
+		--ContentBoxColor: var(--Light-ContentBoxColor);
+		--linkColor: var(--Light-linkColor);
+		--linkVisitedColor: var(--Light-linkVisitedColor);
+	}
+}
+@media (prefers-color-scheme: light) {
+	#body_container {
+		--backgroundColor: var(--Light-backgroundColor);
+		--textColorSecondary: var(--Light-textColorSecondary);
+		--ButtonColor: var(--Light-ButtonColor);
+		--ButtonBorderColor: var(--Light-ButtonBorderColor);
+		--ButtonTextColor: var(--Light-ButtonTextColor);
+		--HeaderBackgroundColor: var(--Light-HeaderBackgroundColor);
+		--HeaderTextColor: var(--Light-HeaderTextColor);
+		--NavBoxColor: var(--Light-NavBoxColor);
+		--ContentBoxColor: var(--Light-ContentBoxColor);
+		--linkColor: var(--Light-linkColor);
+		--linkVisitedColor: var(--Light-linkVisitedColor);
+	}
+	#ThemeContainer { display: block; }
+	.themeTextLight { display: none; }
+	.themeTextDark { display: block; }
+	#theme-toggle:checked ~ #body_container .themeTextLight { display: block; }
+	#theme-toggle:checked ~ #body_container .themeTextDark { display: none; }
+	#theme-toggle:checked ~ #body_container {
+		--backgroundColor: var(--Dark-backgroundColor);
+		--textColorSecondary: var(--Dark-textColorSecondary);
+		--ButtonColor: var(--Dark-ButtonColor);
+		--ButtonBorderColor: var(--Dark-ButtonBorderColor);
+		--ButtonTextColor: var(--Dark-ButtonTextColor);
+		--HeaderBackgroundColor: var(--Dark-HeaderBackgroundColor);
+		--HeaderTextColor: var(--Dark-HeaderTextColor);
+		--NavBoxColor: var(--Dark-NavBoxColor);
+		--ContentBoxColor: var(--Dark-ContentBoxColor);
+		--linkColor: var(--Dark-linkColor);
+		--linkVisitedColor: var(--Dark-linkVisitedColor);
+	}
+}
+#theme-toggle { display: none; }
+
+/* ---------------- Header ------------------------ */
+
+#bootlegheader { display: block; }
+header {
+	background-color: var(--HeaderBackgroundColor);
+	min-width: 100%;
+	min-height: 40px;
+	height: max-content;
+	border-radius: 0 0 10px 10px;
+	
+	display: flex;
+	flex-wrap: wrap;
+}
+#dropdown {
+	height: 30px;
+	width: 20px;
+	padding: 5px 10px 5px 10px;
+	float: left;
+	display: flex;
+    flex-direction: column;
+}
+#dropdown label:hover {
+	cursor: pointer;
+}
+#dropdown label {
+	border-bottom: 2px solid var(--HeaderTextColor);
+	flex-grow: 1;
+	min-height: 0;
+}
+#dropdown label + label + label + label { border-bottom: 0; }
+header img {
+	margin: auto 0 auto 0;
+	padding-right: 5px;
+	width: 25px;
+	height: 25px;
+}
+
+header h1 {
+	margin: 0;
+	font-weight: 1;
+	color: var(--HeaderTextColor);
+	font-size: 25px;
+	line-height: 40px;
+}
+
+/* ---------------- Button General ----------- */
+
+.Button {
+	margin: 5px 7px 5px auto;
+	max-width: max-content;
+}
+.Button * {
+	color: #00e;
 	position: relative;
-	left: var(--Title-center);
-  	transform: translate(calc(-1*var(--Title-center)), 0%);
-	margin-top: 20px;
-	text-align: left;
-	font-size:30px;
-
-	width: min(90vw, 1280px);
-	/*color: #000;
-  	background-color: #b35000;*/
-  	padding: min(20px, 4vw);
-  	border-radius: calc(min(20px, 4vw)*5/2);
+	background-color: var(--ButtonColor);
+	border-color: var(--ButtonBorderColor);
+	color: var(--ButtonTextColor);
+	cursor: pointer;
+	font-size: 20px;
+	padding: 3px 10px 3px 10px;
+	appearance: auto;
+	box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+}
+.Button *:visited {
+	color: #551a8b;
+}
+.Button *:active {
+	box-shadow: none;
+	left: 1px;
+	top: 1px;
 }
 
-@font-face{
-    font-family: "Binary";
-    src: url('binxchr.ttf');
+/* ---------------- Nav Bar ------------------------ */
+
+#dropdownElements {
+	position: absolute;
+	background-color: var(--NavBoxColor);
+	border-radius: 10px;
+	margin: 5px;
+	box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+
+	overflow: hidden;
+	height: max-content;
+	transform-origin: top left;
+	transform: scale(0, 0);
+	transition: transform 0.2s, padding 0.2s;
+
+	animation-name: chromiumBrowserGarbage;
+	animation-duration: 0.2s;
+	animation-iteration-count: 1;
+}
+@keyframes chromiumBrowserGarbage {
+	0%   { height: 0px; }
+	100%   { height: 0px; }
+}
+#dropdownElements a {
+	font-size: 20px;
+	display: block;
+	line-height: 35px;
+}
+#Navbar-toggle { display: none; }
+#Navbar-toggle:checked ~ #body_container #dropdownElements {
+	padding: 5px;
+	transform: scale(1, 1);
+	animation-duration: 0s;
 }
 
-.Title {
-  font-family: var(--Font);
-  font-size: 70px;
-  
-  color: #1a9900;
-  background-color: #000;
-}
-.Header {
-  margin-top: var(--Offset-y);
-  margin-left: var(--Offset-x);
-  font-size: 40px;
-}
-.Text {
-  margin-top: var(--Offset-y);
-  margin-left: var(--Offset-x);
-  font-size: 25px;
-}
+/* ------------------ Footer ------------------ */
 
-.Grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr; /*620px*/
-  grid-template-rows: max-content 640px;
-  /*grid-template-rows: 40px 640px;*/
-  /*background-color: #2196F3;*/
-}
-.Grid-Item {
-  /*background-color: rgba(255, 255, 255);
-  border: 1px solid rgb(0, 0, 0);*/
-  margin-top: calc(var(--Offset-y)*1.5);
-  font-size: 30px;
-  text-align: center;
-}
+footer {
+	margin-top: auto;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
 
-/*.ul.Bullets {
-	list-style-type: circle;
-}*/
-/*visibility: hidden;*/
-
-.TOC-box {
-	color: #000;
-  	background-color: #b35000;
+	width: 100%;
+	background-color: var(--HeaderBackgroundColor);
+	color: var(--HeaderTextColor);
+	border-radius: 10px 10px 0 0;
 }
-.TOC-text {
-	margin-top: var(--Offset-y);
-  	margin-left: var(--Offset-x);
-}
+footer * {
+	width: max-content;
+	padding: 5px;
+	font-size: 17px;
+	margin: 0;
+	flex: 1;
 
-.Font-box {
-	color: #000;
-  	background-color: #00adb3;
+	margin-top: auto;
+	margin-bottom: auto;
 }
-
-.fot-Bottom {
+footer p { text-align: left; }
+footer p + p { text-align: center; }
+#PersonalLinks {
+	display: flex;
+	flex-direction: row-reverse;
+	flex-wrap: wrap-reverse;
+}
+#PersonalLinks a {
+	flex: 0;
+	padding: 0;
+	margin: 0;
+	display: flex;
+}
+#PersonalLinks a img {
 	padding: 0px;
-	border: min(20px, 4vw) solid;
-	border-color: #00008B;
-	background-color: #4c4cff;
-	margin-bottom: 20px;
+	height: 25px;
+	width: 25px;
 }
-.fot-Text {
+
+/* --------------- General Section Stuff ---------------- */
+
+#bootlegheader ~ h1 {
+	display: inline-block;
+	color: var(--textColorSecondary);
+	margin: 0 auto 20px auto;
 	text-align: center;
-	margin-left: 15px;
-	font-size: min(30px, 6vw);
-	line-height: 50px;
+	border-bottom: 2px solid var(--textColorSecondary);
+	font-size: 80px;
+ 	padding: 10px 80px;
+}
+.SectionStart {
+	width: 100%;
+	padding: 20px;
+	height: max-content;
+	box-sizing: border-box;
+	text-align: center;
+}
+.SectionStart h1 {
+	display: inline-block;
+	color: var(--textColorSecondary);
+	margin: 0 auto 20px auto;
+	text-align: center;
+	border-bottom: 2px solid var(--textColorSecondary);
+	font-size: 40px;
+ 	padding: 0px 40px;
+}
+.GenericContentContainer {
+	background-color: var(--ContentBoxColor);
+	box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+	color: var(--textColorSecondary);
+	text-align: left;
+	border-radius: 20px;
+	padding: 10px;
+	margin: 5px;
+	height: max-content;
+}
+.GenericContentContainer h2 {
+	margin: 5px 0 0 10px;
+	font-size: 25px;
+}
+.GenericContentContainer p {
+	margin: 5px 0 0 15px;
+	font-size: 18px;
+}
+.GenericContentContainer li {
+	margin: 0;
+	font-size: 18px;
 }
 
-.webgl-content * {border: 0; padding: 0;}
-.webgl-content {position: relative; top: 0%; left: 50%; -webkit-transform: translate(-50%, -0%); transform: translate(-50%, -0%);}
+/* --------- Interactable Keyboard ------------- */
 
-.webgl-content .logo, .progress {position: absolute; left: 50%; top: 50%; -webkit-transform: translate(-50%, -50%); transform: translate(-50%, -50%);}
-.webgl-content .logo {background: url('progressLogo.Light.png') no-repeat center / contain; width: 154px; height: 130px;}
-.webgl-content .progress {height: 18px; width: 141px; margin-top: 90px;}
-.webgl-content .progress .empty {background: url('progressEmpty.Light.png') no-repeat right / cover; float: right; width: 100%; height: 100%; display: inline-block;}
-.webgl-content .progress .full {background: url('progressFull.Light.png') no-repeat left / cover; float: left; width: 0%; height: 100%; display: inline-block;}
+#Keyboard {
+	display: flex;
+	margin: 0 auto;
+	--widthAmount: 90%;
+	width: var(--widthAmount);
+}
+#Keyboard .GenericContentContainer { width: 100%; }
+#Keyboard .GenericContentContainer input { display: none; }
+#Keyboard .GenericContentContainer img {
+	display: flex;
+	width: 100%;
+}
+#Keyboard .GenericContentContainer img ~ div {
+	display: none;
+}
+#KeyboardAbsolute {
+	display: flex;
+	flex-direction: column;
+	position: absolute;
+	width: calc(var(--widthAmount) - 60px);
+}
+#KeyboardAbsolute div {
+	position: relative;
+	/* background-color: rgba(235, 235, 235, 0.50); */
+	aspect-ratio: 20.9;
+	width: 100%;
+	height: auto;
+}
+#KeyboardAbsolute div:nth-child(2) {
+	aspect-ratio: 150;
+	/* background-color: rgba(66, 2, 2, 1); */
+}
+#KeyboardAbsolute div label {
+	position: absolute;
+	background-color: var(--ButtonColor);
+	opacity: 0.5;
+	width: 4.4%;
+	height: 98%;
+	margin: auto 0;
+}
+#Keyboard_1:checked ~ #KeyboardAbsolute label[for="Keyboard_1"],
+#Keyboard_2:checked ~ #KeyboardAbsolute label[for="Keyboard_2"],
+#Keyboard_3:checked ~ #KeyboardAbsolute label[for="Keyboard_3"],
+#Keyboard_z:checked ~ #KeyboardAbsolute label[for="Keyboard_z"],
+#Keyboard_x:checked ~ #KeyboardAbsolute label[for="Keyboard_x"],
+#Keyboard_c:checked ~ #KeyboardAbsolute label[for="Keyboard_c"],
+#Keyboard_v:checked ~ #KeyboardAbsolute label[for="Keyboard_v"],
+#Keyboard_b:checked ~ #KeyboardAbsolute label[for="Keyboard_b"],
+#Keyboard_n:checked ~ #KeyboardAbsolute label[for="Keyboard_n"],
+#Keyboard_m:checked ~ #KeyboardAbsolute label[for="Keyboard_m"],
+#Keyboard_q:checked ~ #KeyboardAbsolute label[for="Keyboard_q"],
+#Keyboard_r:checked ~ #KeyboardAbsolute label[for="Keyboard_r"],
+#Keyboard_e:checked ~ #KeyboardAbsolute label[for="Keyboard_e"],
+#Keyboard_up:checked ~ #KeyboardAbsolute label[for="Keyboard_up"],
+#Keyboard_down:checked ~ #KeyboardAbsolute label[for="Keyboard_down"],
+#Keyboard_left:checked ~ #KeyboardAbsolute label[for="Keyboard_left"],
+#Keyboard_right:checked ~ #KeyboardAbsolute label[for="Keyboard_right"],
+#Keyboard_altenter:checked ~ #KeyboardAbsolute label[for="Keyboard_altenter"],
+#Keyboard_debugMovement:checked ~ #KeyboardAbsolute label[for="Keyboard_debugMovement"] { background-color: orange; }
 
-.webgl-content .logo.Dark {background-image: url('progressLogo.Dark.png');}
-.webgl-content .progress.Dark .empty {background-image: url('progressEmpty.Dark.png');}
-.webgl-content .progress.Dark .full {background-image: url('progressFull.Dark.png');}
+#Keyboard_1:checked ~ .Keyboard_1,
+#Keyboard_2:checked ~ .Keyboard_2,
+#Keyboard_3:checked ~ .Keyboard_3,
+#Keyboard_z:checked ~ .Keyboard_z,
+#Keyboard_x:checked ~ .Keyboard_x,
+#Keyboard_c:checked ~ .Keyboard_c,
+#Keyboard_v:checked ~ .Keyboard_v,
+#Keyboard_b:checked ~ .Keyboard_b,
+#Keyboard_n:checked ~ .Keyboard_n,
+#Keyboard_m:checked ~ .Keyboard_m,
+#Keyboard_q:checked ~ .Keyboard_q,
+#Keyboard_r:checked ~ .Keyboard_r,
+#Keyboard_e:checked ~ .Keyboard_e,
+#Keyboard_up:checked ~ .Keyboard_up,
+#Keyboard_down:checked ~ .Keyboard_down,
+#Keyboard_left:checked ~ .Keyboard_left,
+#Keyboard_right:checked ~ .Keyboard_right,
+#Keyboard_altenter:checked ~ .Keyboard_altenter,
+#Keyboard_debugMovement:checked ~ .Keyboard_debugMovement { display: block; }
 
-.webgl-content .footer {margin-top: 5px; height: 38px; line-height: 38px; font-family: Helvetica, Verdana, Arial, sans-serif; font-size: 18px;}
-.webgl-content .footer .webgl-logo, .title, .fullscreen {height: 100%; display: inline-block; background: transparent center no-repeat;}
-.webgl-content .footer .webgl-logo {background-image: url('webgl-logo.png'); width: 204px; float: left;}
-.webgl-content .footer .title {margin-right: 10px; float: right;}
-.webgl-content .footer .fullscreen {background-image: url('fullscreen.png'); width: 38px; float: right;}
+
+/* --------------- Program Downloads and WebGL ---------- */
+
+#ProgramDownloadWebGL {
+	display: grid;
+	grid-template-columns: 1fr 4fr;
+}
+@media (max-width: 600px) {
+	#ProgramDownloadWebGL { grid-template-columns: 1fr; }
+}
+#ProgramDownloadWebGL video {
+	width: 100%;
+	height: auto;
+}
+
+/* --------------- Welcome Content Stuff ---------------- */
+
+#WelcomeContent {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+}
+@media (max-width: 600px) {
+	#WelcomeContent { grid-template-columns: 1fr; }
+}
+#WelcomeContent img {
+	width: 70%;
+	height: auto;
+	margin: auto;
+}
+#WelcomeContent .GenericContentContainer {
+	margin: auto 0;
+}
+
+/* --------------- 3 Sided Flashcards AP Chem ---------------- */
+
+#APChem_Background {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+}
+@media (max-width: 1000px) {
+	#APChem_Background { grid-template-columns: 1fr; }
+}
+#APChem_Background .GenericContentContainer embed {
+	width: 100%;
+	height: 600px;
+}
+
+/* --------------- Simple Background Box ---------------- */
+
+#OneBackgroundBox {
+	width: 70%;
+	margin: 0 auto;
+	display: grid;
+	grid-template-columns: 1fr;
+}
+
+/* ------------------ Projects --------------------- */
+
+#Projects {
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: row;
+	margin: 0 auto;
+	width: 100%;
+	height: max-content;
+	justify-content: center;
+}
+#Projects .GenericContentContainer {
+	margin: 10px 20px;
+	width: 480px;
+	min-height: 400px;
+	height: max-content;
+	/* flex: 1; */
+}
+#Projects .GenericContentContainer img {
+	display: block;
+	width: 80%;
+	margin: 10px auto;
+}
+#Projects .Button a {
+	color: #00e;
+}
+#Projects .Button a:visited {
+	color: #551a8b;
+}
