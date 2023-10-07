@@ -1,1 +1,0 @@
-This is a fun one-off side project where I decided to show I properly covered my textbook. To learn more about it and watch it go here: https://busaba-nicholas.github.io/Main/Math%20Textbook%20GIF/index.html.
